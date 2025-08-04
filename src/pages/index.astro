@@ -1,16 +1,134 @@
 ---
-
+import Layout from "../Layouts/Layout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Inicio">
+  <!-- Hero -->
+  <section class="bg-amber-50 py-20 text-center">
+    <div class="container mx-auto px-4">
+      <h2 class="font-serif text-5xl md:text-6xl text-amber-800 leading-tight">
+        Sabores que endulzan <br />cada momento
+      </h2>
+      <p class="mt-4 max-w-xl mx-auto text-stone-600">
+        Pasteles artesanales, ingredientes locales y recetas que han conquistado corazones desde 2015.
+      </p>
+      <a
+        href="#catalogo"
+        class="mt-8 inline-block bg-rose-500 text-white px-8 py-3 rounded-full font-bold hover:bg-rose-600 transition"
+      >
+        Ver catálogo
+      </a>
+    </div>
+  </section>
+
+  <!-- Catálogo destacado -->
+  <section id="catalogo" class="py-16 container mx-auto px-4">
+    <h3 class="font-serif text-3xl md:text-4xl text-center mb-12">Novedades de la semana</h3>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Producto 1 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden">
+        <img
+          class="w-full h-56 object-cover"
+          src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=800&q=60"
+          alt="Tarta de frambuesa"
+        />
+        <div class="p-6">
+          <span class="bg-emerald-400 text-white text-xs px-2 py-1 rounded-full">Vegano</span>
+          <h4 class="mt-2 text-xl font-bold">Tarta de Frambuesa</h4>
+          <p class="text-sm text-stone-600 mt-1">Bizcocho de almendra, crema vegana y frambuesas frescas.</p>
+          <p class="mt-4 text-lg font-bold text-amber-700">22 €</p>
+          <button class="mt-4 w-full bg-rose-500 text-white py-2 rounded-full hover:bg-rose-600 transition">
+            Añadir al carrito
+          </button>
+        </div>
+      </div>
+
+      <!-- Producto 2 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden">
+        <img
+          class="w-full h-56 object-cover"
+          src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=60"
+          alt="Cheesecake de chocolate"
+        />
+        <div class="p-6">
+          <span class="bg-pink-100 text-rose-600 text-xs px-2 py-1 rounded-full">Nuevo</span>
+          <h4 class="mt-2 text-xl font-bold">Cheesecake Doble Chocolate</h4>
+          <p class="text-sm text-stone-600 mt-1">Base de galleta oreo, relleno de chocolate belga.</p>
+          <p class="mt-4 text-lg font-bold text-amber-700">26 €</p>
+          <button class="mt-4 w-full bg-rose-500 text-white py-2 rounded-full hover:bg-rose-600 transition">
+            Añadir al carrito
+          </button>
+        </div>
+      </div>
+
+      <!-- Producto 3 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden">
+        <img
+          class="w-full h-56 object-cover"
+          src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=800&q=60"
+          alt="Tarta de limón"
+        />
+        <div class="p-6">
+          <h4 class="mt-2 text-xl font-bold">Tarta de Limón y Merengue</h4>
+          <p class="text-sm text-stone-600 mt-1">Curd de limón casero y merengue italiano tostado al soplete.</p>
+          <p class="mt-4 text-lg font-bold text-amber-700">20 €</p>
+          <button class="mt-4 w-full bg-rose-500 text-white py-2 rounded-full hover:bg-rose-600 transition">
+            Añadir al carrito
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nosotros -->
+  <section id="about" class="py-16 bg-amber-50">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+      <div class="md:w-1/2">
+        <img
+          class="rounded-xl shadow-lg"
+          src="https://images.unsplash.com/photo-1607478900766-efe13248b125?auto=format&fit=crop&w=800&q=60"
+          alt="Chef decorando pastel"
+        />
+      </div>
+      <div class="md:w-1/2">
+        <h3 class="font-serif text-3xl md:text-4xl mb-4">Hecho a mano, con alma</h3>
+        <p class="text-stone-600 mb-4">
+          Cada pastel nace en nuestro obrador de barrio, donde la mantequilla es francesa, el cacao es de comercio justo
+          y las frutas llegan cada mañana del mercado.
+        </p>
+        <p class="text-stone-600">
+          Creemos que la repostería es un lenguaje de amor. Por eso, desde 2015, endulzamos cumpleaños, bodas y tardes de café.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="py-16 container mx-auto px-4">
+    <h3 class="font-serif text-3xl md:text-4xl text-center mb-8">¿Tienes un evento especial?</h3>
+    <form class="max-w-lg mx-auto space-y-4">
+      <input
+        type="text"
+        placeholder="Tu nombre"
+        class="w-full border border-stone-300 rounded-md px-4 py-2 focus:ring-rose-500 focus:border-rose-500"
+      />
+      <input
+        type="email"
+        placeholder="Correo electrónico"
+        class="w-full border border-stone-300 rounded-md px-4 py-2 focus:ring-rose-500 focus:border-rose-500"
+      />
+      <textarea
+        rows="4"
+        placeholder="Cuéntanos tu idea"
+        class="w-full border border-stone-300 rounded-md px-4 py-2 focus:ring-rose-500 focus:border-rose-500"
+      ></textarea>
+      <button
+        type="submit"
+        class="w-full bg-rose-500 text-white font-bold py-3 rounded-full hover:bg-rose-600 transition"
+      >
+        Enviar mensaje
+      </button>
+    </form>
+  </section>
+</Layout>
